@@ -1,0 +1,15 @@
+#!/bin/bash
+gcc -std=c99 otp_enc_d.c -o otp_enc_d
+gcc -std=c99 otp_enc.c -o otp_enc
+gcc -std=c99 otp_dec_d.c -o otp_dec_d
+gcc -std=c99 otp_dec.c -o otp_dec
+gcc -std=c99 keygen.c -o keygen
+
+chmod +x ./otp_enc_d
+chmod +x ./otp_enc
+chmod +x ./otp_dec_d
+chmod +x ./otp_dec
+chmod +x ./keygen
+
+pkill otp_enc_d
+pkill otp_dec_d
